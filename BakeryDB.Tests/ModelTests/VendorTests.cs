@@ -8,5 +8,11 @@ namespace BakeryDB.Tests
   [TestClass]
   public class VendorTest
   {
+    [TestMethod]
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("test vendor");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
   }
 }
