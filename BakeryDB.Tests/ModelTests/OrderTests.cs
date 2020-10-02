@@ -18,14 +18,14 @@ namespace BakeryDB.Tests
     public void GetDate_ReturnsDate_String()
     {
       //Arrange
-      string date = "Test Vendor";
-      Order newOrder = new Order(date);
+      string dateOrdered = "Test Vendor";
+      Order newOrder = new Order(dateOrdered);
 
       //Act
-      string result = newOrder.Date;
+      string result = newOrder.DateOrdered;
 
       //Assert
-      Assert.AreEqual(date, result);
+      Assert.AreEqual(dateOrdered, result);
     }
   }
 }
