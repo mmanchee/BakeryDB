@@ -8,6 +8,10 @@ namespace BakeryDB.Tests
   [TestClass]
   public class VendorTest
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -27,6 +31,17 @@ namespace BakeryDB.Tests
 
       //Assert
       Assert.AreEqual(name, result);
+    }
+    [TestMethod]
+    public void VendorId_ReturnsVendorId_Int()
+    {
+      //Arrange
+
+      //Act
+      int result = Vendor.VendorId();
+
+      //Assert
+      Assert.AreEqual(1, result);
     }
     [TestMethod]
     public void GetId_ReturnsVendorId_Int()
