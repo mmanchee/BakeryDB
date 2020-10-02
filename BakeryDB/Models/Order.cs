@@ -26,6 +26,7 @@ namespace BakeryDB.Models
     }
     public static void ClearAll()
     {
+      _invoice = 0;
       _orderList.Clear();
     }
     

@@ -78,5 +78,19 @@ namespace BakeryDB.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string dateOrdered = "MM-DD-YYYY";
+      string dateRec = "MM-DD-YYYY";
+      Order newOrder = new Order(dateOrdered, dateRec);
+
+      //Act
+      int result = newOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }
