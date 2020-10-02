@@ -15,8 +15,17 @@ body {
 
 .interface {
   font-family: 'Courier New', Courier, monospace;
-  color: antiquewhite;
+  color: rgb(136, 255, 107);
   padding: 0 60px 0 60px;
+  font-size: 20px;
+}
+
+.interface a {
+  color: rgb(136, 255, 107);
+}
+
+.interface a :hover {
+  color: rgb(56, 109, 43);
 }
 
 .footer {
@@ -30,3 +39,8 @@ body {
   text-align: center;
   color: aqua;
 }
+
+.black-text {
+  color: black;
+}
+

@@ -3,13 +3,12 @@
 }
 
 <h1>Add a new order to @Model.Name</h1>
-
+<p>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</p>
 <form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-  <input class="form-control" type="date">
-  <label for="dateOrdered">Date Ordered:</label>
-  <input id="dateOrdered" name="dateOrdered" type="text">
-  <label for="dateRec">Date Received:</label>
-  <input id="dateRec" name="dateRec" type="text">
-  <button type='submit'>Add item</button>
+  <label for="dateOrdered">Date Ordered:  </label>
+  <input class="black-text" type="date" id="dateOrdered" name="dateOrdered"><br>
+  <label for="dateRec">Date Received: </label>
+  <input class="black-text" type="date" id="dateRec" name="dateRec"><br>
+  <button class="btn black-text" type='submit'>Add item</button>
 </form>
