@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@using BakeryDB.Models;
+
+<h3>@Model.Name:</h3>
+
+<ol>
+@foreach (Order order in @Model["orders"])
+{
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>Ord: @order.DateOrdered, Rec: @order.DateRec</a></li>
+}
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+<p><a href='/vendors'>Return to vendor list</a></p>
+<p><a href='/vendor/delete/@Model["vendor"].Id'>Delete this vendor</a></p>
+<p><a href='/'>Return to Main Page</a></p>
