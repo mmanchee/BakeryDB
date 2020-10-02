@@ -45,7 +45,7 @@ namespace BakeryDB.Controllers
       Order newOrder = new Order(dateOrdered, dateRec);
       foundVendor.AddOrder(newOrder);
       List<Order> VendorOrders = foundVendor.Orders;
-      model.Add("Orders", VendorOrders);
+      model.Add("orders", VendorOrders);
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
