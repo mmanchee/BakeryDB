@@ -6,7 +6,7 @@ using System;
 namespace BakeryDB.Tests
 {
   [TestClass]
-  public class VendorTest
+  public class VendorTest : IDisposable
   {
     public void Dispose()
     {
@@ -32,29 +32,23 @@ namespace BakeryDB.Tests
       //Assert
       Assert.AreEqual(name, result);
     }
-    [TestMethod]
-    public void VendorId_ReturnsVendorId_Int()
-    {
-      //Arrange
-
-      //Act
-      int result = Vendor.VendorId();
-
-      //Assert
-      Assert.AreEqual(1, result);
-    }
+    
     [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
       //Arrange
-      string name = "Test Vendor";
-      Vendor newVendor = new Vendor(name);
+      string name1 = "Test Vendor 1";
+      string name2 = "Test Vendor 2";
+      Vendor newVendor1 = new Vendor(name1);
+      Vendor newVendor2 = new Vendor(name2);
 
       //Act
-      int result = newVendor.Id;
+      int result1 = newVendor1.Id;
+      int result2 = newVendor2.Id;
 
       //Assert
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(1, result1);
+      Assert.AreEqual(2, result2);
     }
   }
 }

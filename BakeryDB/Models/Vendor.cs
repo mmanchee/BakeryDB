@@ -15,15 +15,13 @@ namespace BakeryDB.Models
     {
       Name = name;
       _vendorList.Add(this);
-      Id = VendorId();
+      _vendorCount++;
+      Id = _vendorCount;
       Order = new List<Order> { };
-    }
-    public static int VendorId()
-    {
-      return 0;
     }
     public static void ClearAll()
     {
+      _vendorCount = 0;
       _vendorList.Clear();
     }
   }
