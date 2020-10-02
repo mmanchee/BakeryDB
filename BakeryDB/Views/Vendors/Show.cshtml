@@ -4,7 +4,7 @@
 
 @using BakeryDB.Models;
 
-<h3>@Model.Name:</h3>
+<h3>@Model["vendor"].Name:</h3>
 
 <ol>
 @foreach (Order order in @Model["orders"])

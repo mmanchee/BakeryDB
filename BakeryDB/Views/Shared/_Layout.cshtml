@@ -2,15 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tamagotchi</title>
+    <title>Pierre's Database</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
     <div class="container">
-      @Html.Partial("Header")
-      @RenderBody()
-      @Html.Partial("Footer")
+      <div class="">
+        <p class="header">Pierre's Bakery Vendor Database</p>
+      </div>
+      <div class="interface-box">
+        <div class="interface">
+          @RenderBody()
+        </div>
+      </div>
+      <div class="footer">
+        <p>This site is only a mock up and does not contain any real vendors or order information. This is a project created for Epicodus by Mike Manchee you can see other projects by clicking <a href="https://mmanchee.github.io/portfolio/">HERE</a></p>
+      </div>
     </div>
   </body>
 </html>

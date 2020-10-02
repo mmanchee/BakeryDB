@@ -1,4 +1,32 @@
 body {
-  background-color: rgb(104, 228, 211);
-  font-size: 30px;
+  background-color: rgb(18, 48, 44);
+}
+
+.jumbotron {
+  background-color: brown;
+}
+
+.interface-box {
+  height: 500px;
+  overflow-y: scroll;
+  margin-top: 20px;
+  background-color: black;
+}
+
+.interface {
+  font-family: 'Courier New', Courier, monospace;
+  color: antiquewhite;
+  padding: 0 60px 0 60px;
+}
+
+.footer {
+  font-size: 15px;
+  color: aqua;
+}
+
+.header {
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: aqua;
 }
