@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hangman\Hangman.csproj" />  
+    <ProjectReference Include="..\BakeryDB\BakeryDB.csproj" />  
   </ItemGroup>
 
 </Project>

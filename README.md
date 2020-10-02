@@ -10,15 +10,33 @@ Pierre is Back! Now he wants an internal database to be able to track all of his
 
 <!-- Brainstorming
 Vendor and Order Classes
-Homepage -> Add Vendor or View Vendors
+Homepage -> Add Vendor or View Vendors **Search**
 Add Vendor -> Inputs (Name, Address, Dropdown Business type) - Save(Vendor Page), Add Orders, or Back
-View Vendors -> List of Vendors (clickable, Vendor Page), Add Vendor, or Back
-Add Orders -> Inputs, 
+View Vendors -> List of Vendors (clickable, Vendor Page) - Add Vendor, or Back
+Vendor Page -> List (clickable -> Order page. displayed -> Order Date, Delivery Date, Payment) - Add Order, Delete Vendor, or Back
+Add Orders -> Inputs (Date ordered, Date Delivered, Items, Payment, **Vendor Rating of Order**) - Save(Order Page), Add Orders, Delete Order, or Back
+Delete Vendor ->
+Delete Order ->
+** Search** -> Input - Search, or Back
+
  -->
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-|  1.  ... | ... | ... |
+|  1.  Vendor Class, Properties | ... | ... |
+|  2.  Vendor Constructor, tests (Instantiate, Get, Set) | ... | ... |
+|  3.  Vendor GetAll, tests and method | ... | ... |
+|  4.  Vendor ClearAll, tests and method | ... | ... |
+|  5.  Vendor Find, tests and method | ... | ... |
+|  6.  Order Class, Properties | ... | ... |
+|  7.  Order Constructor, tests (Instantiate, Get, Set) | ... | ... |
+|  8.  Order GetAll, tests and method | ... | ... |
+|  9.  Order ClearAll, tests and method | ... | ... |
+|  10.  Order Find, tests and method | ... | ... |
+|  11.  Home Page, Welcome | ... | ... |
+|  12.  Vendor Pages, View, Add, Delete, Edit | ... | ... |
+|  13.  Order Pages, View, Add, Delete, Edit | ... | ... |
+
 
 ## Setup/Installation Requirements
 
