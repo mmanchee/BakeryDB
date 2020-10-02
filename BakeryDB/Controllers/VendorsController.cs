@@ -49,5 +49,11 @@ namespace BakeryDB.Controllers
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
+    [HttpPost("vendors/search")]
+    public ActionResult Search(string search)
+    {
+      List<Vendor> vendorList = Vendor.Search(search);
+      return View(vendorList);
+    }
   }
 }
