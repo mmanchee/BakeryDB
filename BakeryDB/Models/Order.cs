@@ -29,6 +29,9 @@ namespace BakeryDB.Models
       _orderList.Clear();
       _invoice = 0;
     }
-    
+    public static Order Find(int searchId)
+    {
+      return _orderList.Find(x => x.Id == searchId);
+    }
   }
 }

@@ -92,5 +92,24 @@ namespace BakeryDB.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string dateOrdered1 = "MM-DD-YYYY";
+      string dateOrdered2 = "MM-DD-YYYY";
+      string dateRec1 = "MM-DD-YYYY";
+      string dateRec2 = "MM-DD-YYYY";
+      Order newOrder1 = new Order(dateOrdered1, dateRec1);
+      Order newOrder2 = new Order(dateOrdered2, dateRec2);
+
+      //Act
+      Order result1 = Order.Find(1);
+      Order result2 = Order.Find(2);
+      
+      //Assert
+      Assert.AreEqual(newOrder1, result1);
+      Assert.AreEqual(newOrder2, result2);
+    }
   }
 }
