@@ -28,6 +28,10 @@ namespace BakeryDB.Models
     {
       return _vendorList;
     }
+    public static Vendor Find(int searchId)
+    {
+      return _vendorList.Find(x => x.Id == searchId);
+    }
   }
 }
 
