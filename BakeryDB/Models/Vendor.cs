@@ -24,6 +24,10 @@ namespace BakeryDB.Models
       _vendorCount = 0;
       _vendorList.Clear();
     }
+    public static List<Vendor> GetAll()
+    {
+      return _vendorList;
+    }
   }
 }
 
