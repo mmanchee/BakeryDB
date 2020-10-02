@@ -9,7 +9,7 @@ namespace BakeryDB.Models
     private static int _vendorCount = 0;
     public string Name { get; set; }
     public int Id { get; }
-    public List<Order> Order { get; set; }
+    public List<Order> Orders { get; set; }
     
     public Vendor(string name)
     {
@@ -17,7 +17,7 @@ namespace BakeryDB.Models
       _vendorList.Add(this);
       _vendorCount++;
       Id = _vendorCount;
-      Order = new List<Order> { };
+      Orders = new List<Order> { };
     }
     public static void ClearAll()
     {
@@ -31,6 +31,10 @@ namespace BakeryDB.Models
     public static Vendor Find(int searchId)
     {
       return _vendorList.Find(x => x.Id == searchId);
+    }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
   }
 }
