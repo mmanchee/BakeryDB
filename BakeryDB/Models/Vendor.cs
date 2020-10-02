@@ -9,7 +9,7 @@ namespace BakeryDB.Models
     
     public Vendor(string name)
     {
-      
+      Name = name;
     }
   }
 }
