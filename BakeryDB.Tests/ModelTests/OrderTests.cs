@@ -60,5 +60,23 @@ namespace BakeryDB.Tests
       // Assert
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      //Arrange
+      string dateOrdered1 = "MM-DD-YYYY";
+      string dateOrdered2 = "MM-DD-YYYY";
+      string dateRec1 = "MM-DD-YYYY";
+      string dateRec2 = "MM-DD-YYYY";
+      Order newOrder1 = new Order(dateOrdered1, dateRec1);
+      Order newOrder2 = new Order(dateOrdered2, dateRec2);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      //Act
+      List<Order> result = Order.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
