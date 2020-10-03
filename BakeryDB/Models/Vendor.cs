@@ -52,7 +52,13 @@ namespace BakeryDB.Models
     }
     public static void Delete(int id)
     {
-
+      for(int i = 0; i < _vendorList.Count; i++)
+      {
+        if (_vendorList[i].Id == id)
+        {
+          _vendorList.RemoveAt(i);
+        }
+      }
     }
   }
 }

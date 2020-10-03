@@ -105,14 +105,14 @@ namespace BakeryDB.Tests
       string name2 = "Bob's Coffee";
       Vendor newVendor1 = new Vendor(name1);
       Vendor newVendor2 = new Vendor(name2);
-      List<Vendor> newList1 = new List<Vendor> { newVendor1, newVendor2 };
 
       //Act
       Vendor.Delete(1);
       List<Vendor> result = new List<Vendor> { newVendor2 };
+      List<Vendor> test = Vendor.GetAll();
 
       //Assert
-      CollectionAssert.AreEqual(newList1, result);
+      CollectionAssert.AreEqual(test, result);
     }
   }
 }
