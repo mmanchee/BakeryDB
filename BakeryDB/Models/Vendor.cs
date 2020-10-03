@@ -38,10 +38,12 @@ namespace BakeryDB.Models
     }
     public static List<Vendor> Search(string search)
     {
+      search = search.ToLower();
       List<Vendor> searchList = new List<Vendor> { };
       foreach(Vendor vendor in _vendorList)
       {
-        if (vendor.Name.Contains(search))
+        string name = vendor.Name.ToLower();
+        if (name.Contains(search))
         {
           searchList.Add(vendor); 
         }
