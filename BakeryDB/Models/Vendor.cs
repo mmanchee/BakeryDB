@@ -50,6 +50,10 @@ namespace BakeryDB.Models
       }
       return searchList;
     }
+    public static void Delete(int id)
+    {
+
+    }
   }
 }
 

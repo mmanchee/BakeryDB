@@ -97,5 +97,22 @@ namespace BakeryDB.Tests
       //Assert
       Assert.AreEqual(newVendor1, result1);
     }
+    [TestMethod]
+    public void Delete_RemovesVendorObject_Delete()
+    {
+      //Arrange
+      string name1 = "Starbucks";
+      string name2 = "Bob's Coffee";
+      Vendor newVendor1 = new Vendor(name1);
+      Vendor newVendor2 = new Vendor(name2);
+      List<Vendor> newList1 = new List<Vendor> { newVendor1, newVendor2 };
+
+      //Act
+      Vendor.Delete(1);
+      List<Vendor> result = new List<Vendor> { newVendor2 };
+
+      //Assert
+      CollectionAssert.AreEqual(newList1, result);
+    }
   }
 }
